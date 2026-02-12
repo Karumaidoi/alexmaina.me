@@ -1,0 +1,43 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "Code for my portfolio (Redesigned)",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [
+    "alex",
+    "maina",
+    "portfolio"
+  ],
+  "author": "Alex Maina",
+  "license": "Unlicense",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.16.4",
+    "@parcel/transformer-jsonld": "^2.16.4",
+    "@parcel/transformer-sass": "^2.16.4",
+    "autoprefixer": "^10.2.6",
+    "parcel": "^2.16.4",
+    "postcss": "^8.1.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 1%",
+          "last 4 versions",
+          "ie >= 9"
+        ]
+      }
+    }
+  },
+  "targets": {
+    "main": false
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "notyf": "^3.10.0"
+  }
+}
