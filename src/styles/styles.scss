@@ -447,6 +447,12 @@ ul {
     color: var(--text);
   }
 
+  &__desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
   &__tech {
     color: var(--primary);
     font-weight: 500;
@@ -468,7 +474,7 @@ ul {
     }
 
     &__start {
-      gap: 0.25rem;
+      gap: 0.35rem;
     }
 
     &__end {
