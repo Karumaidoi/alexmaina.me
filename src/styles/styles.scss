@@ -526,6 +526,10 @@ ul {
 
       &:hover .placard__image {
         background-color: var(--primary);
+
+        img {
+          filter: brightness(0) invert(1);
+        }
       }
     }
   }
