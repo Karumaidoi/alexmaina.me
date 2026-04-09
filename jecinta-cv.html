@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jecinta Wairimu Mwangi — CV</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #1a6b5a;
+        --accent-light: #e8f4f1;
+        --text: #1a1a2e;
+        --text-secondary: #5a6475;
+        --border: #e2e8f0;
+        --surface: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text);
+        background: #f4f6f8;
+        font-size: 13px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        max-width: 800px;
+        margin: 1rem auto;
+        background: var(--surface);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ── Header ── */
+      .cv-header {
+        background: var(--accent);
+        color: #fff;
+        padding: 1.4rem 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 2rem;
+      }
+
+      .cv-header__name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        line-height: 1.15;
+      }
+
+      .cv-header__title {
+        margin-top: 0.25rem;
+        font-size: 0.78rem;
+        font-weight: 500;
+        opacity: 0.85;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .cv-header__contact {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        font-size: 0.76rem;
+        opacity: 0.9;
+      }
+
+      .cv-header__contact a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .cv-header__contact a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Body ── */
+      .cv-body {
+        display: grid;
+        grid-template-columns: 1fr 260px;
+      }
+
+      /* ── Main Column ── */
+      .cv-main {
+        padding: 1.2rem 2rem 1.2rem 2.5rem;
+        border-right: 1px solid var(--border);
+      }
+
+      /* ── Sidebar ── */
+      .cv-sidebar {
+        padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+        background: #fafbfc;
+      }
+
+      /* ── Section ── */
+      .section {
+        margin-bottom: 1.1rem;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      .section__title {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent-light);
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.6rem;
+      }
+
+      /* ── Summary ── */
+      .summary p {
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ── Experience ── */
+      .job {
+        margin-bottom: 0.8rem;
+      }
+
+      .job:last-child {
+        margin-bottom: 0;
+      }
+
+      .job__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.1rem;
+      }
+
+      .job__title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .job__period {
+        font-size: 0.67rem;
+        font-weight: 500;
+        color: var(--accent);
+        white-space: nowrap;
+        background: var(--accent-light);
+        padding: 0.1rem 0.4rem;
+        border-radius: 20px;
+      }
+
+      .job__company {
+        font-size: 0.72rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+      }
+
+      .job__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+
+      .job__list li {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        padding-left: 0.9rem;
+        position: relative;
+        line-height: 1.5;
+      }
+
+      .job__list li::before {
+        content: '›';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      /* ── Achievements ── */
+      .achievement-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .achievement-list li {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        padding-left: 1.1rem;
+        position: relative;
+        line-height: 1.5;
+      }
+
+      .achievement-list li::before {
+        content: '★';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 0.6rem;
+        top: 0.15rem;
+      }
+
+      /* ── Sidebar: Skills ── */
+      .skills-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .skills-list li {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .skills-list li::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+
+      /* ── Sidebar: Education ── */
+      .edu-item {
+        margin-bottom: 0.6rem;
+      }
+
+      .edu-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .edu-item__degree {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.3;
+      }
+
+      .edu-item__school {
+        font-size: 0.72rem;
+        color: var(--text-secondary);
+        margin-top: 0.05rem;
+      }
+
+      .edu-item__year {
+        font-size: 0.68rem;
+        color: var(--accent);
+        font-weight: 500;
+        margin-top: 0.05rem;
+      }
+
+      /* ── Sidebar: Attributes ── */
+      .attributes-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+      }
+
+      .attributes-list li {
+        font-size: 0.68rem;
+        background: var(--accent-light);
+        color: var(--accent);
+        font-weight: 600;
+        padding: 0.15rem 0.5rem;
+        border-radius: 20px;
+      }
+
+      /* ── Referees ── */
+      .referee {
+        margin-bottom: 0.6rem;
+      }
+
+      .referee:last-child {
+        margin-bottom: 0;
+      }
+
+      .referee__name {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .referee__role {
+        font-size: 0.7rem;
+        color: var(--text-secondary);
+      }
+
+      .referee__contact {
+        font-size: 0.7rem;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      /* ── Print ── */
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          margin: 0;
+          box-shadow: none;
+          max-width: 100%;
+          height: 100vh;
+          overflow: hidden;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .cv-header {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 2rem;
+        }
+
+        .cv-header__contact {
+          text-align: left;
+        }
+
+        .cv-body {
+          grid-template-columns: 1fr;
+        }
+
+        .cv-main {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+          padding: 1.5rem 2rem;
+        }
+
+        .cv-sidebar {
+          padding: 1.5rem 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+
+      <!-- Header -->
+      <header class="cv-header">
+        <div>
+          <h1 class="cv-header__name">Jecinta Wairimu<br />Mwangi</h1>
+          <p class="cv-header__title">Food &amp; Beverage Supervisor</p>
+        </div>
+        <div class="cv-header__contact">
+          <span>📍 Nanyuki, Kenya</span>
+          <span>📞 0718 001 509</span>
+          <a href="mailto:mwangijecinta406@gmail.com">mwangijecinta406@gmail.com</a>
+          <span>DOB: 09 July 1997</span>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="cv-body">
+
+        <!-- Main Column -->
+        <main class="cv-main">
+
+          <!-- Summary -->
+          <section class="section summary">
+            <h2 class="section__title">Professional Summary</h2>
+            <p>
+              A highly motivated and goal-oriented Food &amp; Beverage Supervisor
+              with over <strong>4 years of experience</strong> in hospitality
+              operations. Focused, flexible, and skilled in team leadership, hotel
+              openings, and delivering excellent guest experiences in fast-paced
+              environments.
+            </p>
+          </section>
+
+          <!-- Experience -->
+          <section class="section">
+            <h2 class="section__title">Work Experience</h2>
+
+            <div class="job">
+              <div class="job__header">
+                <span class="job__title">Senior Food &amp; Beverage Supervisor</span>
+                <span class="job__period">Jan 2025 – Present</span>
+              </div>
+              <p class="job__company">That Nickolee Hotel</p>
+              <ul class="job__list">
+                <li>Oversee daily F&amp;B operations across all outlets</li>
+                <li>Supervise and motivate front-line service staff</li>
+                <li>Ensure consistent delivery of quality service standards</li>
+                <li>Handle guest concerns and resolve complaints promptly</li>
+                <li>Maintain compliance with hotel policies and procedures</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <div class="job__header">
+                <span class="job__title">Food &amp; Beverage Supervisor</span>
+                <span class="job__period">2021 – 2025</span>
+              </div>
+              <p class="job__company">Aberdare Prestige &amp; Royal Cottages</p>
+              <ul class="job__list">
+                <li>Managed day-to-day food &amp; beverage operations</li>
+                <li>Supervised a team of service staff across dining areas</li>
+                <li>Coordinated buffet setups and events for hotel guests</li>
+                <li>Trained new team members on service standards</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <div class="job__header">
+                <span class="job__title">Team Leader</span>
+                <span class="job__period">1 Year</span>
+              </div>
+              <p class="job__company">Le Pristine Hotel</p>
+              <ul class="job__list">
+                <li>Led the service team during daily operations</li>
+                <li>Delivered high-standard customer service</li>
+                <li>Managed staff scheduling and shift planning</li>
+                <li>Coordinated table and event setup</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Achievements -->
+          <section class="section">
+            <h2 class="section__title">Key Achievements</h2>
+            <ul class="achievement-list">
+              <li>
+                Successfully contributed to the opening and setup of two hotels
+                from pre-opening to full operation
+              </li>
+              <li>
+                Established service standards and procedures adopted across
+                departments
+              </li>
+              <li>
+                Improved team performance through structured training and
+                consistent supervision
+              </li>
+            </ul>
+          </section>
+
+          <!-- Referees -->
+          <section class="section">
+            <h2 class="section__title">Referees</h2>
+
+            <div class="referee">
+              <p class="referee__name">Mr. John G M</p>
+              <p class="referee__role">General Manager — That Nickolee Hotel</p>
+              <p class="referee__contact">+254 727 376 724</p>
+            </div>
+
+            <div class="referee">
+              <p class="referee__name">Mr. Michael Royal</p>
+              <p class="referee__role">General Manager — Aberdare Cottages</p>
+              <p class="referee__contact">+254 727 742 838</p>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="cv-sidebar">
+
+          <!-- Education -->
+          <section class="section">
+            <h2 class="section__title">Education</h2>
+
+            <div class="edu-item">
+              <p class="edu-item__degree">Diploma in Catering &amp; Accommodation Management</p>
+              <p class="edu-item__school">Rift Valley Institute of Science and Technology</p>
+            </div>
+
+            <div class="edu-item">
+              <p class="edu-item__degree">KCSE</p>
+              <p class="edu-item__school">Ngorika Secondary School</p>
+              <p class="edu-item__year">Completed 2015</p>
+            </div>
+
+            <div class="edu-item">
+              <p class="edu-item__degree">KCPE</p>
+              <p class="edu-item__school">Masiaka Westways Academy</p>
+            </div>
+          </section>
+
+          <!-- Skills -->
+          <section class="section">
+            <h2 class="section__title">Key Skills</h2>
+            <ul class="skills-list">
+              <li>Customer Service</li>
+              <li>Team Leadership</li>
+              <li>Buffet &amp; À la carte</li>
+              <li>Event Coordination</li>
+              <li>Upselling</li>
+              <li>Time Management</li>
+              <li>Food Safety</li>
+              <li>Staff Training</li>
+            </ul>
+          </section>
+
+          <!-- Personal Attributes -->
+          <section class="section">
+            <h2 class="section__title">Personal Attributes</h2>
+            <ul class="attributes-list">
+              <li>Goal-oriented</li>
+              <li>Focused</li>
+              <li>Flexible</li>
+              <li>Team player</li>
+              <li>Communicator</li>
+            </ul>
+          </section>
+
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

@@ -20,7 +20,8 @@
     "@parcel/transformer-sass": "^2.16.4",
     "autoprefixer": "^10.2.6",
     "parcel": "^2.16.4",
-    "postcss": "^8.1.0"
+    "postcss": "^8.1.0",
+    "puppeteer": "^24.40.0"
   },
   "postcss": {
     "plugins": {
