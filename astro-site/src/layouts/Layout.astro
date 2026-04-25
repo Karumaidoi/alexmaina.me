@@ -1,0 +1,353 @@
+---
+import 'aos/dist/aos.css';
+import 'notyf/notyf.min.css';
+import '../styles/styles.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Alex Maina Mwangi | Full-Stack, Frontend, Backend & Mobile Developer in Nairobi, Kenya',
+  description = 'Hire Alex Maina Mwangi — full-stack, frontend, backend, and mobile developer in Nairobi, Kenya. 5+ years building React, Next.js, Node.js, Go, Flutter & React Native apps. Behind Pocket of Paradise, Yeshara, Mamlaka Hub, TripHoppa, and Almaza. Active in Nairobi developer meetups. MPESA, Pesapal & Flutterwave integrations. Available for hire.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = 'https://res.cloudinary.com/margaiwangara/image/upload/v1636184598/portfolio/portfolio_txrh0r.png';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://alexmaina.me/#person',
+  name: 'Alex Maina Mwangi',
+  alternateName: 'Alex Maina',
+  url: 'https://alexmaina.me',
+  image: ogImage,
+  jobTitle: 'Full-Stack, Frontend, Backend & Mobile Developer',
+  description,
+  email: 'mainahmwangi12@gmail.com',
+  telephone: '+254719531828',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Nairobi',
+    addressRegion: 'Nairobi',
+    addressCountry: 'KE',
+  },
+  nationality: { '@type': 'Country', name: 'Kenya' },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Machakos University',
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Mamlaka Hub Spoke Limited',
+  },
+  sameAs: [
+    'https://www.linkedin.com/in/mainaalex/',
+    'https://github.com/Karumaidoi',
+    'https://alexmaina.me',
+  ],
+  knowsAbout: [
+    'Full-Stack Development',
+    'Web Development',
+    'Mobile Development',
+    'React',
+    'Next.js',
+    'Node.js',
+    'TypeScript',
+    'Go',
+    'Flutter',
+    'PostgreSQL',
+    'MongoDB',
+    'GraphQL',
+    'AWS',
+    'Docker',
+    'CI/CD',
+    'MPESA Integration',
+    'Pesapal Integration',
+    'Flutterwave Integration',
+    'Agentic AI Applications',
+    'Blockchain Development',
+  ],
+  knowsLanguage: ['English', 'Swahili'],
+  hasOccupation: [
+    {
+      '@type': 'Occupation',
+      name: 'Full-Stack Developer',
+      occupationLocation: { '@type': 'City', name: 'Nairobi', address: { '@type': 'PostalAddress', addressCountry: 'KE' } },
+      skills: 'React, Next.js, Node.js, TypeScript, Go, PostgreSQL, AWS',
+      description: 'Full-stack developer in Nairobi, Kenya, building end-to-end web and mobile applications.',
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Frontend Developer',
+      occupationLocation: { '@type': 'City', name: 'Nairobi' },
+      skills: 'React, Next.js, Vue.js, TypeScript, JavaScript, Tailwind, Sass',
+      description: 'Frontend developer in Nairobi specialising in React, Next.js, and TypeScript user interfaces.',
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Backend Developer',
+      occupationLocation: { '@type': 'City', name: 'Nairobi' },
+      skills: 'Node.js, Express, Go, PostgreSQL, MongoDB, AWS, Docker',
+      description: 'Backend developer in Nairobi building scalable APIs, microservices, and payment integrations (MPESA, Pesapal, Flutterwave).',
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Mobile Developer',
+      occupationLocation: { '@type': 'City', name: 'Nairobi' },
+      skills: 'Flutter, React Native, Dart, Kotlin, Swift, iOS, Android',
+      description: 'Mobile app developer in Nairobi shipping iOS and Android apps with Flutter and React Native.',
+    },
+  ],
+  memberOf: [
+    {
+      '@type': 'Organization',
+      name: 'Nairobi JavaScript Community',
+      url: 'https://www.meetup.com/nairobi-javascript-community/',
+    },
+    {
+      '@type': 'Organization',
+      name: 'GDG Nairobi',
+      url: 'https://gdg.community.dev/gdg-nairobi/',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Flutter Nairobi',
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://alexmaina.me/#website',
+  url: 'https://alexmaina.me',
+  name: 'Alex Maina Mwangi Portfolio',
+  description,
+  inLanguage: 'en-US',
+  publisher: { '@id': 'https://alexmaina.me/#person' },
+};
+
+const professionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://alexmaina.me/#service',
+  name: 'Alex Maina Mwangi — Full-Stack, Frontend, Backend & Mobile Development Services in Nairobi',
+  alternateName: ['Full-Stack Developer Nairobi', 'Frontend Developer Nairobi', 'Backend Developer Nairobi', 'Mobile Developer Nairobi'],
+  url: 'https://alexmaina.me',
+  image: ogImage,
+  priceRange: '$$',
+  telephone: '+254719531828',
+  email: 'mainahmwangi12@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Nairobi',
+    addressRegion: 'Nairobi',
+    addressCountry: 'KE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -1.286389,
+    longitude: 36.817223,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Nairobi' },
+    { '@type': 'Country', name: 'Kenya' },
+    { '@type': 'AdministrativeArea', name: 'East Africa' },
+    { '@type': 'Country', name: 'Worldwide' },
+  ],
+  serviceType: [
+    'Full-Stack Development',
+    'Frontend Development',
+    'Backend Development',
+    'Mobile App Development',
+    'Flutter Development',
+    'React Native Development',
+    'React Development',
+    'Next.js Development',
+    'Node.js Development',
+    'Go Development',
+    'iOS App Development',
+    'Android App Development',
+    'API Design & Development',
+    'MPESA / Pesapal / Flutterwave Integration',
+    'Software Engineering Mentorship',
+  ],
+  provider: { '@id': 'https://alexmaina.me/#person' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Mobile & Web Development Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Full-Stack Development in Nairobi',
+          serviceType: 'Full-Stack Development',
+          areaServed: { '@type': 'City', name: 'Nairobi' },
+          description: 'End-to-end web and mobile development in Nairobi, Kenya — frontend, backend, database, and deployment.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Frontend Development in Nairobi',
+          serviceType: 'Frontend Development',
+          areaServed: { '@type': 'City', name: 'Nairobi' },
+          description: 'React, Next.js, and TypeScript frontend development for Nairobi-based and international clients.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Backend Development in Nairobi',
+          serviceType: 'Backend Development',
+          areaServed: { '@type': 'City', name: 'Nairobi' },
+          description: 'Node.js, Go, and Express APIs with MPESA, Pesapal, and Flutterwave integrations.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Mobile App Development in Nairobi',
+          serviceType: 'Mobile Development',
+          areaServed: { '@type': 'City', name: 'Nairobi' },
+          description: 'iOS and Android mobile app development using Flutter and React Native.',
+        },
+      },
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '5',
+  },
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://alexmaina.me/#localbusiness',
+  name: 'Alex Maina Mwangi — Full-Stack & Mobile Developer Nairobi',
+  image: ogImage,
+  url: 'https://alexmaina.me',
+  telephone: '+254719531828',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Nairobi',
+    addressRegion: 'Nairobi',
+    addressCountry: 'KE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -1.286389,
+    longitude: 36.817223,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+  areaServed: { '@type': 'City', name: 'Nairobi' },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://alexmaina.me',
+    },
+  ],
+};
+---
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Alex Maina Mwangi" />
+    <meta
+      name="keywords"
+      content="full-stack developer Nairobi, frontend developer Nairobi, backend developer Nairobi, mobile developer Nairobi, mobile app developer Nairobi, full-stack developer Kenya, frontend developer Kenya, backend developer Kenya, React developer Nairobi, Next.js developer Nairobi, Node.js developer Nairobi, TypeScript developer Nairobi, Go developer Nairobi, Flutter developer Nairobi, React Native developer Nairobi, iOS developer Nairobi, Android developer Nairobi, hire developer Nairobi, freelance developer Nairobi, software engineer Nairobi, Alex Maina Mwangi, Pocket of Paradise developer, Yeshara developer, Mamlaka Hub developer, TripHoppa, Almaza app, Light Growth, WarCare, Jionee Medical, Nairobi developer meetups, Nairobi tech meetups, Kenya developer community, MPESA integration, Pesapal integration, Flutterwave integration, agentic AI Nairobi, blockchain developer Nairobi"
+    />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="KE-30" />
+    <meta name="geo.placename" content="Nairobi" />
+    <meta name="geo.position" content="-1.286389;36.817223" />
+    <meta name="ICBM" content="-1.286389, 36.817223" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#2a9d8f" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+    <link rel="dns-prefetch" href="https://formspree.io" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Alex Maina Mwangi" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Alex Maina Mwangi — Full-Stack Developer Portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Alex Maina Mwangi — Full-Stack Developer Portfolio" />
+    <meta name="twitter:creator" content="@alexmaina" />
+
+    <!-- Icons & PWA -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#2a9d8f" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Sitemap & RSS -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(professionalServiceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </head>
+  <body>
+    <a href="#wrapper" class="skip-link">Skip to main content</a>
+    <slot />
+  </body>
+</html>

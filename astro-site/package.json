@@ -1,0 +1,19 @@
+{
+  "name": "alex-maina-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "aos": "^2.3.4",
+    "astro": "^4.16.0",
+    "notyf": "^3.10.0",
+    "sass": "^1.79.0"
+  }
+}

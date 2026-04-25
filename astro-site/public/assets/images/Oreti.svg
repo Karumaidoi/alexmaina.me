@@ -1,0 +1,70 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <title>Background</title>
+
+  <!-- Teal blob, upper-left area -->
+  <circle cx="400" cy="300" r="200" fill="#2a9d8f"/>
+
+  <!-- Coral ellipse, center -->
+  <ellipse cx="800" cy="500" rx="180" ry="130" fill="#e76f51" transform="rotate(-10 800 500)"/>
+
+  <!-- Teal rounded rectangle, right-center -->
+  <rect x="1000" y="300" width="280" height="350" rx="80" ry="80" fill="#2a9d8f" transform="rotate(6 1140 475)"/>
+
+  <!-- Small coral circle -->
+  <circle cx="1200" cy="250" r="80" fill="#e76f51"/>
+
+  <!-- Slate circle, left-center -->
+  <circle cx="350" cy="700" r="130" fill="#64748b"/>
+
+  <!-- Teal ellipse, lower-center -->
+  <ellipse cx="850" cy="850" rx="220" ry="150" fill="#2a9d8f" transform="rotate(5 850 850)"/>
+
+  <!-- Coral circle, lower-right -->
+  <circle cx="1200" cy="900" r="150" fill="#e76f51"/>
+
+  <!-- Small teal pill -->
+  <rect x="550" y="650" width="120" height="50" rx="25" ry="25" fill="#2a9d8f" transform="rotate(-15 610 675)"/>
+
+  <!-- Flowing curve, teal -->
+  <path d="M200 700 C450 600, 700 750, 950 650 S1250 550, 1400 620" fill="none" stroke="#2a9d8f" stroke-width="6"/>
+
+  <!-- Flowing curve, coral -->
+  <path d="M250 900 C500 820, 800 920, 1050 840 S1300 800, 1400 850" fill="none" stroke="#e76f51" stroke-width="4"/>
+
+  <!-- Accent dots -->
+  <circle cx="600" cy="250" r="16" fill="#2a9d8f"/>
+  <circle cx="1050" cy="600" r="12" fill="#e76f51"/>
+  <circle cx="300" cy="500" r="10" fill="#64748b"/>
+  <circle cx="750" cy="200" r="14" fill="#2a9d8f"/>
+  <circle cx="1300" cy="650" r="14" fill="#e76f51"/>
+
+  <!-- Grid dots, right area -->
+  <g fill="#64748b">
+    <circle cx="1100" cy="750" r="5"/>
+    <circle cx="1130" cy="750" r="5"/>
+    <circle cx="1160" cy="750" r="5"/>
+    <circle cx="1100" cy="780" r="5"/>
+    <circle cx="1130" cy="780" r="5"/>
+    <circle cx="1160" cy="780" r="5"/>
+    <circle cx="1100" cy="810" r="5"/>
+    <circle cx="1130" cy="810" r="5"/>
+    <circle cx="1160" cy="810" r="5"/>
+  </g>
+
+  <!-- Grid dots, left area -->
+  <g fill="#2a9d8f">
+    <circle cx="250" cy="400" r="4"/>
+    <circle cx="275" cy="400" r="4"/>
+    <circle cx="300" cy="400" r="4"/>
+    <circle cx="250" cy="425" r="4"/>
+    <circle cx="275" cy="425" r="4"/>
+    <circle cx="300" cy="425" r="4"/>
+    <circle cx="250" cy="450" r="4"/>
+    <circle cx="275" cy="450" r="4"/>
+    <circle cx="300" cy="450" r="4"/>
+  </g>
+
+  <!-- Ring accents -->
+  <circle cx="950" cy="300" r="50" fill="none" stroke="#e76f51" stroke-width="3"/>
+  <circle cx="450" cy="900" r="40" fill="none" stroke="#2a9d8f" stroke-width="3"/>
+</svg>

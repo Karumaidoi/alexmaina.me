@@ -1,0 +1,64 @@
+---
+const services = [
+  {
+    icon: '/assets/icons/web-programming.svg',
+    alt: 'Web development icon',
+    title: 'Web Development',
+    description:
+      'Building responsive, performant web applications with modern frameworks like React, Node.js, and the full MERN stack. From concept to deployment.',
+  },
+  {
+    icon: '/assets/icons/consulting.svg',
+    alt: 'Mentorship and consulting icon',
+    title: 'Mentorship',
+    description:
+      'Guiding aspiring developers through code reviews, pair programming sessions, and structured learning paths to accelerate their growth.',
+  },
+  {
+    icon: '/assets/icons/coding.svg',
+    alt: 'Mobile development icon',
+    title: 'Mobile Development',
+    description:
+      'Crafting cross-platform mobile experiences using React Native and Flutter, delivering native performance with shared codebases.',
+  },
+];
+
+const offerCatalogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'Software Engineering Services',
+  itemListElement: services.map((service) => ({
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: service.title,
+      description: service.description,
+      provider: { '@id': 'https://alexmaina.me/#person' },
+    },
+  })),
+};
+---
+<section id="services" aria-labelledby="services-heading">
+  <section class="services-inner section-inner">
+    <h2 id="services-heading" class="section-heading" data-aos="fade-up">What I'm all about</h2>
+    <section class="section-grid">
+      {services.map((service, i) => (
+        <article class="placard" data-aos="fade-up" data-aos-delay={i * 100}>
+          <figure class="placard__image">
+            <img
+              src={service.icon}
+              alt={service.alt}
+              width="36"
+              height="36"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <h3 class="placard__heading">{service.title}</h3>
+          <p class="placard__description">{service.description}</p>
+        </article>
+      ))}
+    </section>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(offerCatalogSchema)} />
+</section>

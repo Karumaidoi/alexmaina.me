@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Alex Maina Mwangi
+Contact: mainahmwangi12 [at] gmail.com
+Twitter: @alexmaina
+GitHub: github.com/Karumaidoi
+LinkedIn: linkedin.com/in/mainaalex
+From: Nairobi, Kenya
+
+/* SITE */
+Last update: 2026/04/25
+Standards: HTML5, CSS3, ES2022
+Components: Astro, Sass, AOS, Notyf
+Software: VS Code

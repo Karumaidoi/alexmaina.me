@@ -1,0 +1,48 @@
+---
+const stats = [
+  { value: '5+', label: 'Years Experience' },
+  { value: '10+', label: 'Projects Shipped' },
+  { value: '50%', label: 'Engagement Increase' },
+  { value: '40%', label: 'SEO Rankings Boost' },
+];
+---
+<section id="about">
+  <section class="about-inner section-inner">
+    <h2 class="section-heading" data-aos="fade-up">About Me</h2>
+    <div class="about-inner__content" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        I'm a <strong>full-stack, frontend, backend, and mobile developer
+        based in Nairobi, Kenya</strong>, with <strong>5+ years</strong> of
+        experience across startups and SaaS companies. I build production-grade
+        <strong>React, Next.js, Node.js, Go, and Flutter</strong> applications.
+        Teams I've led have shipped products that achieved a
+        <strong>40% increase in SEO rankings</strong>,
+        <strong>33% improvement in user retention</strong>, and
+        <strong>50% rise in user engagement</strong>.
+      </p>
+      <p>
+        Selected work includes <strong>Pocket of Paradise</strong> (luxury
+        travel platform), <strong>Yeshara</strong> (CMA-approved real-estate
+        blockchain), <strong>Mamlaka Hub</strong> (agentic AI fintech),
+        <strong>TripHoppa</strong> (peer-to-peer parcel shipping with a Flutter
+        mobile app), and <strong>Almaza</strong> (fintech virtual cards on the
+        App Store). My specialties: end-to-end web and mobile development, API
+        design, and Kenyan payment integrations — <strong>MPESA, Pesapal,
+        and Flutterwave</strong>.
+      </p>
+      <p>
+        I'm an active member of the Nairobi developer community and regularly
+        attend Nairobi tech meetups (JavaScript, GDG Nairobi, Flutter Nairobi).
+        Available for hire across Nairobi and remotely worldwide.
+      </p>
+    </div>
+    <div class="about-inner__stats" data-aos="fade-up" data-aos-delay="200">
+      {stats.map((stat) => (
+        <div class="stat">
+          <span class="stat__number">{stat.value}</span>
+          <span class="stat__label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+</section>

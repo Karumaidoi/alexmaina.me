@@ -1,0 +1,70 @@
+---
+---
+<section id="contact">
+  <section class="section-inner contact-inner">
+    <h2 class="section-heading" data-aos="fade-up">Get in Touch</h2>
+    <section class="contact-inner__box" data-aos="fade-up" data-aos-delay="100">
+      <section class="contact-inner__box__start">
+        <p>Lets talk about anything!</p>
+        <p>
+          Don't like forms? Send me an
+          <a href="mailto:mainahmwangi12@gmail.com">email</a>
+        </p>
+      </section>
+      <form
+        action="https://formspree.io/f/xnqlznzr"
+        method="POST"
+        class="contact-form"
+        autocomplete="off"
+        id="contact-form-id"
+      >
+        <fieldset>
+          <div class="contact-form__bunk">
+            <div class="contact-form__group">
+              <label for="name-field" class="contact-form__label">Name</label>
+              <input
+                type="text"
+                class="contact-form__input"
+                id="name-field"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="contact-form__group">
+              <label for="email-field" class="contact-form__label">Email</label>
+              <input
+                type="email"
+                class="contact-form__input"
+                id="email-field"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+          <div class="contact-form__group">
+            <label for="subject-field" class="contact-form__label">Subject</label>
+            <input
+              type="text"
+              class="contact-form__input"
+              id="subject-field"
+              name="subject"
+            />
+          </div>
+          <div class="contact-form__group">
+            <label for="message-field" class="contact-form__label">Message</label>
+            <textarea
+              name="message"
+              id="message-field"
+              rows="5"
+              class="contact-form__input"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+  </section>
+</section>

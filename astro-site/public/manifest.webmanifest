@@ -1,0 +1,19 @@
+{
+  "name": "Alex Maina Mwangi",
+  "short_name": "Alex Maina",
+  "description": "Full-stack web and mobile developer in Nairobi, Kenya.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#2a9d8f",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

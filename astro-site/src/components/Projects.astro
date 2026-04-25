@@ -1,0 +1,103 @@
+---
+const projects = [
+  {
+    name: 'Pocket of Paradise',
+    description: 'Luxury travel platform for curated safari adventures and beach holidays across Kenya, Maldives, Bali, and beyond.',
+    tech: 'React, Node.js',
+    url: 'https://www.pocketofparadisesafari.com/',
+  },
+  {
+    name: 'WarCare',
+    description: 'Humanitarian platform delivering relief and aid to war-affected communities across East & Central Africa.',
+    tech: 'React, Node.js',
+    url: 'https://warcare.org.uk/',
+  },
+  {
+    name: 'Jionee Medical',
+    description: 'Mobile diagnostics platform connecting patients with healthcare providers for home X-rays, ultrasounds, and ECGs, with M-Pesa payments.',
+    tech: 'React, Node.js, PostgreSQL, Flutter',
+    url: 'https://jioneemedical.com/',
+  },
+  {
+    name: 'Light Growth',
+    description: 'Local business directory where users discover verified businesses, read reviews, and list their own.',
+    tech: 'React, Next.js, Supabase (PostgreSQL)',
+    url: 'https://lightgrowth.co.ke/',
+  },
+  {
+    name: 'TripHoppa',
+    description: 'Peer-to-peer parcel shipping platform connecting senders with trusted travelers heading their way.',
+    tech: 'React, Node.js, PostgreSQL, Flutter',
+    url: 'https://triphoppa.com/',
+  },
+  {
+    name: 'Yeshara',
+    description: 'CMA-approved blockchain platform tokenizing real estate into tradeable digital assets in Kenya.',
+    tech: 'React, Go, PostgreSQL, Blockchain',
+    url: 'https://app.yeshara.network/',
+  },
+  {
+    name: 'Almaza',
+    description: 'Fintech mobile app for creating secure virtual cards instantly, controlling spending, and shopping globally.',
+    tech: 'Flutter, Go',
+    url: 'https://apps.apple.com/ke/app/almaza-card/id6751055417',
+  },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Projects by Alex Maina Mwangi',
+  numberOfItems: projects.length,
+  itemListElement: projects.map((project, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'CreativeWork',
+      name: project.name,
+      url: project.url,
+      description: project.description,
+      keywords: project.tech,
+      creator: { '@id': 'https://alexmaina.me/#person' },
+    },
+  })),
+};
+---
+<section id="projects">
+  <section class="projects-inner section-inner">
+    <h2 class="section-heading" data-aos="fade-up">Projects</h2>
+    <section class="section-grid">
+      {projects.map((project, i) => (
+        <article class="placard" data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
+          <section class="placard__body">
+            <section class="placard__body__start">
+              <h3>{project.name}</h3>
+              <p class="placard__desc">{project.description}</p>
+              <p class="placard__tech">{project.tech}</p>
+            </section>
+            <section class="placard__body__end">
+              <figure>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${project.name} project (opens in a new tab)`}
+                >
+                  <img
+                    src="/assets/icons/external-link.svg"
+                    alt={`Visit ${project.name} project`}
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </section>
+          </section>
+        </article>
+      ))}
+    </section>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+</section>
