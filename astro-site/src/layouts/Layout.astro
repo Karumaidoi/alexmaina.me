@@ -10,11 +10,10 @@ interface Props {
 
 const {
   title = 'Alex Maina Mwangi | Full-Stack, Frontend, Backend & Mobile Developer in Nairobi, Kenya',
-  description = 'Hire Alex Maina Mwangi — full-stack, frontend, backend, and mobile developer in Nairobi, Kenya. 5+ years building React, Next.js, Node.js, Go, Flutter & React Native apps. Behind Pocket of Paradise, Yeshara, Mamlaka Hub, TripHoppa, and Almaza. Active in Nairobi developer meetups. MPESA, Pesapal & Flutterwave integrations. Available for hire.',
+  description = 'Hire Alex Maina Mwangi — full-stack, frontend, backend, and mobile developer in Nairobi, Kenya. 5+ years building React, Next.js, Node.js, Go, Flutter & React Native apps. Behind Pocket of Paradise, Yeshara, Mamlaka Hub, TripHoppa, and Almaza. Active in Nairobi developer meetups. Payment gateway integrations. Available for hire.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
-const ogImage = 'https://res.cloudinary.com/margaiwangara/image/upload/v1636184598/portfolio/portfolio_txrh0r.png';
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -23,7 +22,6 @@ const personSchema = {
   name: 'Alex Maina Mwangi',
   alternateName: 'Alex Maina',
   url: 'https://alexmaina.me',
-  image: ogImage,
   jobTitle: 'Full-Stack, Frontend, Backend & Mobile Developer',
   description,
   email: 'mainahmwangi12@gmail.com',
@@ -64,10 +62,7 @@ const personSchema = {
     'AWS',
     'Docker',
     'CI/CD',
-    'MPESA Integration',
-    'Pesapal Integration',
-    'Flutterwave Integration',
-    'Agentic AI Applications',
+    'Payment Gateway Integration',
     'Blockchain Development',
   ],
   knowsLanguage: ['English', 'Swahili'],
@@ -91,7 +86,7 @@ const personSchema = {
       name: 'Backend Developer',
       occupationLocation: { '@type': 'City', name: 'Nairobi' },
       skills: 'Node.js, Express, Go, PostgreSQL, MongoDB, AWS, Docker',
-      description: 'Backend developer in Nairobi building scalable APIs, microservices, and payment integrations (MPESA, Pesapal, Flutterwave).',
+      description: 'Backend developer in Nairobi building scalable APIs, microservices, and payment gateway integrations.',
     },
     {
       '@type': 'Occupation',
@@ -99,22 +94,6 @@ const personSchema = {
       occupationLocation: { '@type': 'City', name: 'Nairobi' },
       skills: 'Flutter, React Native, Dart, Kotlin, Swift, iOS, Android',
       description: 'Mobile app developer in Nairobi shipping iOS and Android apps with Flutter and React Native.',
-    },
-  ],
-  memberOf: [
-    {
-      '@type': 'Organization',
-      name: 'Nairobi JavaScript Community',
-      url: 'https://www.meetup.com/nairobi-javascript-community/',
-    },
-    {
-      '@type': 'Organization',
-      name: 'GDG Nairobi',
-      url: 'https://gdg.community.dev/gdg-nairobi/',
-    },
-    {
-      '@type': 'Organization',
-      name: 'Flutter Nairobi',
     },
   ],
 };
@@ -137,7 +116,6 @@ const professionalServiceSchema = {
   name: 'Alex Maina Mwangi — Full-Stack, Frontend, Backend & Mobile Development Services in Nairobi',
   alternateName: ['Full-Stack Developer Nairobi', 'Frontend Developer Nairobi', 'Backend Developer Nairobi', 'Mobile Developer Nairobi'],
   url: 'https://alexmaina.me',
-  image: ogImage,
   priceRange: '$$',
   telephone: '+254719531828',
   email: 'mainahmwangi12@gmail.com',
@@ -172,7 +150,7 @@ const professionalServiceSchema = {
     'iOS App Development',
     'Android App Development',
     'API Design & Development',
-    'MPESA / Pesapal / Flutterwave Integration',
+    'Payment Gateway Integration',
     'Software Engineering Mentorship',
   ],
   provider: { '@id': 'https://alexmaina.me/#person' },
@@ -207,7 +185,7 @@ const professionalServiceSchema = {
           name: 'Backend Development in Nairobi',
           serviceType: 'Backend Development',
           areaServed: { '@type': 'City', name: 'Nairobi' },
-          description: 'Node.js, Go, and Express APIs with MPESA, Pesapal, and Flutterwave integrations.',
+          description: 'Node.js, Go, and Express APIs with payment gateway integrations.',
         },
       },
       {
@@ -222,11 +200,6 @@ const professionalServiceSchema = {
       },
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '5',
-  },
 };
 
 const localBusinessSchema = {
@@ -234,7 +207,6 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://alexmaina.me/#localbusiness',
   name: 'Alex Maina Mwangi — Full-Stack & Mobile Developer Nairobi',
-  image: ogImage,
   url: 'https://alexmaina.me',
   telephone: '+254719531828',
   priceRange: '$$',
@@ -285,7 +257,7 @@ const breadcrumbSchema = {
     <meta name="author" content="Alex Maina Mwangi" />
     <meta
       name="keywords"
-      content="full-stack developer Nairobi, frontend developer Nairobi, backend developer Nairobi, mobile developer Nairobi, mobile app developer Nairobi, full-stack developer Kenya, frontend developer Kenya, backend developer Kenya, React developer Nairobi, Next.js developer Nairobi, Node.js developer Nairobi, TypeScript developer Nairobi, Go developer Nairobi, Flutter developer Nairobi, React Native developer Nairobi, iOS developer Nairobi, Android developer Nairobi, hire developer Nairobi, freelance developer Nairobi, software engineer Nairobi, Alex Maina Mwangi, Pocket of Paradise developer, Yeshara developer, Mamlaka Hub developer, TripHoppa, Almaza app, Light Growth, WarCare, Jionee Medical, Nairobi developer meetups, Nairobi tech meetups, Kenya developer community, MPESA integration, Pesapal integration, Flutterwave integration, agentic AI Nairobi, blockchain developer Nairobi"
+      content="full-stack developer Nairobi, frontend developer Nairobi, backend developer Nairobi, mobile developer Nairobi, mobile app developer Nairobi, full-stack developer Kenya, frontend developer Kenya, backend developer Kenya, React developer Nairobi, Next.js developer Nairobi, Node.js developer Nairobi, TypeScript developer Nairobi, Go developer Nairobi, Flutter developer Nairobi, React Native developer Nairobi, iOS developer Nairobi, Android developer Nairobi, hire developer Nairobi, freelance developer Nairobi, software engineer Nairobi, Alex Maina Mwangi, Pocket of Paradise developer, Yeshara developer, Mamlaka Hub developer, TripHoppa, Almaza app, Light Growth, WarCare, Jionee Medical, Nairobi developer meetups, Nairobi tech meetups, Kenya developer community, payment gateway integration Nairobi, blockchain developer Nairobi"
     />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
@@ -315,20 +287,11 @@ const breadcrumbSchema = {
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Alex Maina Mwangi" />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:secure_url" content={ogImage} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Alex Maina Mwangi — Full-Stack Developer Portfolio" />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content="Alex Maina Mwangi — Full-Stack Developer Portfolio" />
-    <meta name="twitter:creator" content="@alexmaina" />
 
     <!-- Icons & PWA -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
