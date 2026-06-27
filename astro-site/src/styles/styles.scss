@@ -680,6 +680,100 @@ ul {
   }
 }
 
+// ─── FAQ ─────────────────────────────────────────────
+#faq {
+  padding: 2rem 0;
+
+  .faq-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-base),
+      box-shadow var(--transition-base);
+
+    &[open] {
+      border-color: var(--primary);
+      box-shadow: var(--tw-shadow);
+    }
+
+    &__question {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 1.35rem;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: color var(--transition-base);
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &__icon {
+      position: relative;
+      flex-shrink: 0;
+      height: 16px;
+      width: 16px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--primary);
+        border-radius: 2px;
+        transition: transform var(--transition-base);
+      }
+
+      &::before {
+        top: 7px;
+        left: 0;
+        height: 2px;
+        width: 16px;
+      }
+
+      &::after {
+        top: 0;
+        left: 7px;
+        height: 16px;
+        width: 2px;
+      }
+    }
+
+    &[open] &__icon::after {
+      transform: scaleY(0);
+    }
+
+    &__answer {
+      padding: 0 1.35rem 1.2rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+  }
+}
+
 // ─── Contact ─────────────────────────────────────────
 #contact {
   .contact-inner {
