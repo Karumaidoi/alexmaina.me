@@ -1,0 +1,12 @@
+# Build the Astro site that lives in astro-site/.
+# `base` makes Netlify cd into astro-site for dependency detection and build,
+# so it uses that folder's package-lock.json (npm) and ignores the old,
+# corrupt root yarn.lock from the deprecated Parcel site.
+[build]
+  base = "astro-site"
+  command = "npm run build"
+  publish = "dist"          # relative to base -> astro-site/dist
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-audit --no-fund"
