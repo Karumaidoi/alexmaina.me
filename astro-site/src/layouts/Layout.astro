@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = 'Alex Maina Mwangi | Full-Stack, Frontend, Backend & Mobile Developer in Nairobi, Kenya',
-  description = 'Hire Alex Maina Mwangi — full-stack, frontend, backend, and mobile developer in Nairobi, Kenya. 5+ years building React, Next.js, Node.js, Go, Flutter & React Native apps. Behind Pocket of Paradise, Yeshara, Mamlaka Hub, TripHoppa, and Almaza. Active in Nairobi developer meetups. Payment gateway integrations. Available for hire.',
+  title = 'Alex Maina Mwangi | Payment Systems Engineer in Nairobi, Kenya — M-PESA, Flutterwave & Fintech',
+  description = 'Alex Maina Mwangi — payment systems engineer in Nairobi, Kenya. 5 years building the part of the product where money moves: M-PESA (Daraja), Flutterwave, Pesapal and Core Banking integrations, wallets, card issuing, payouts, and reconciliation — so nothing is lost, duplicated, or processed twice. Go, Node.js, PostgreSQL, Flutter. Behind GPAY, Almaza, Yeshara, and Mamlaka Hub. Available for hire.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -22,7 +22,7 @@ const personSchema = {
   name: 'Alex Maina Mwangi',
   alternateName: 'Alex Maina',
   url: 'https://alexmaina.me',
-  jobTitle: 'Full-Stack, Frontend, Backend & Mobile Developer',
+  jobTitle: 'Payment Systems Engineer',
   description,
   email: 'mainahmwangi12@gmail.com',
   telephone: '+254719531828',
@@ -47,8 +47,20 @@ const personSchema = {
     'https://alexmaina.me',
   ],
   knowsAbout: [
-    'Full-Stack Development',
-    'Web Development',
+    'Payment Systems Engineering',
+    'Payment Gateway Integration',
+    'M-PESA Daraja API',
+    'Flutterwave',
+    'Pesapal',
+    'Core Banking API Integration',
+    'Mobile Money Collections and Disbursements',
+    'Virtual Card Issuing',
+    'Digital Wallets',
+    'Merchant Payouts and Settlement',
+    'Payment Reconciliation',
+    'Idempotency and Exactly-Once Processing',
+    'Distributed Transactions',
+    'Fintech Backend Development',
     'Mobile Development',
     'React',
     'Next.js',
@@ -69,17 +81,17 @@ const personSchema = {
   hasOccupation: [
     {
       '@type': 'Occupation',
-      name: 'Full-Stack Developer',
+      name: 'Payment Systems Engineer',
       occupationLocation: { '@type': 'City', name: 'Nairobi', address: { '@type': 'PostalAddress', addressCountry: 'KE' } },
-      skills: 'React, Next.js, Node.js, TypeScript, Go, PostgreSQL, AWS',
-      description: 'Full-stack developer in Nairobi, Kenya, building end-to-end web and mobile applications.',
+      skills: 'M-PESA Daraja, Flutterwave, Pesapal, Core Banking APIs, Go, Node.js, PostgreSQL, idempotency, reconciliation',
+      description: 'Payment systems engineer in Nairobi, Kenya, building collections, disbursements, wallets, card issuing, and settlement that stay correct under concurrency.',
     },
     {
       '@type': 'Occupation',
-      name: 'Frontend Developer',
+      name: 'Fintech Backend Engineer',
       occupationLocation: { '@type': 'City', name: 'Nairobi' },
-      skills: 'React, Next.js, Vue.js, TypeScript, JavaScript, Tailwind, Sass',
-      description: 'Frontend developer in Nairobi specialising in React, Next.js, and TypeScript user interfaces.',
+      skills: 'Go, Node.js, Express, PostgreSQL, microservices, AWS, Docker, event-driven architecture',
+      description: 'Fintech backend engineer in Nairobi building idempotent payment APIs, transaction state machines, and reconciliation pipelines.',
     },
     {
       '@type': 'Occupation',
@@ -90,10 +102,10 @@ const personSchema = {
     },
     {
       '@type': 'Occupation',
-      name: 'Mobile Developer',
+      name: 'Fintech Mobile Developer',
       occupationLocation: { '@type': 'City', name: 'Nairobi' },
-      skills: 'Flutter, React Native, Dart, Kotlin, Swift, iOS, Android',
-      description: 'Mobile app developer in Nairobi shipping iOS and Android apps with Flutter and React Native.',
+      skills: 'Flutter, Dart, Kotlin, Swift, iOS, Android, in-app payments, card issuing',
+      description: 'Mobile developer in Nairobi shipping Flutter iOS and Android apps that move money — wallets, card issuing, and checkout.',
     },
   ],
 };
@@ -113,8 +125,8 @@ const professionalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   '@id': 'https://alexmaina.me/#service',
-  name: 'Alex Maina Mwangi — Full-Stack, Frontend, Backend & Mobile Development Services in Nairobi',
-  alternateName: ['Full-Stack Developer Nairobi', 'Frontend Developer Nairobi', 'Backend Developer Nairobi', 'Mobile Developer Nairobi'],
+  name: 'Alex Maina Mwangi — Payment Systems & Fintech Engineering in Nairobi',
+  alternateName: ['Payment Systems Engineer Nairobi', 'Fintech Developer Nairobi', 'M-PESA Integration Developer Nairobi', 'Backend Developer Nairobi', 'Mobile Developer Nairobi'],
   url: 'https://alexmaina.me',
   priceRange: '$$',
   telephone: '+254719531828',
@@ -137,65 +149,68 @@ const professionalServiceSchema = {
     { '@type': 'Country', name: 'Worldwide' },
   ],
   serviceType: [
-    'Full-Stack Development',
-    'Frontend Development',
+    'Payment Gateway Integration',
+    'M-PESA Daraja Integration',
+    'Flutterwave Integration',
+    'Pesapal Integration',
+    'Core Banking API Integration',
+    'Digital Wallet Development',
+    'Virtual Card Issuing',
+    'Merchant Payouts & Settlement',
+    'Payment Reconciliation',
+    'Fintech Backend Development',
+    'Fintech Mobile App Development',
+    'API Design & Development',
     'Backend Development',
-    'Mobile App Development',
-    'Flutter Development',
-    'React Native Development',
-    'React Development',
-    'Next.js Development',
-    'Node.js Development',
     'Go Development',
+    'Node.js Development',
+    'Flutter Development',
     'iOS App Development',
     'Android App Development',
-    'API Design & Development',
-    'Payment Gateway Integration',
-    'Software Engineering Mentorship',
   ],
   provider: { '@id': 'https://alexmaina.me/#person' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Mobile & Web Development Services',
+    name: 'Payment Systems & Fintech Engineering Services',
     itemListElement: [
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Full-Stack Development in Nairobi',
-          serviceType: 'Full-Stack Development',
+          name: 'Payment Gateway Integration in Nairobi',
+          serviceType: 'Payment Gateway Integration',
           areaServed: { '@type': 'City', name: 'Nairobi' },
-          description: 'End-to-end web and mobile development in Nairobi, Kenya — frontend, backend, database, and deployment.',
+          description: 'M-PESA (Daraja), Flutterwave, Pesapal, and Core Banking integrations — collections, disbursements, wallet top-ups, and merchant payouts.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Frontend Development in Nairobi',
-          serviceType: 'Frontend Development',
+          name: 'Transaction Correctness & Reconciliation',
+          serviceType: 'Payment Reconciliation',
           areaServed: { '@type': 'City', name: 'Nairobi' },
-          description: 'React, Next.js, and TypeScript frontend development for Nairobi-based and international clients.',
+          description: 'Idempotent payment endpoints, one-way transaction state machines, exactly-once callback handling, and daily reconciliation against provider records.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Backend Development in Nairobi',
-          serviceType: 'Backend Development',
+          name: 'Fintech Backend Development in Nairobi',
+          serviceType: 'Fintech Backend Development',
           areaServed: { '@type': 'City', name: 'Nairobi' },
-          description: 'Node.js, Go, and Express APIs with payment gateway integrations.',
+          description: 'Go and Node.js payment services on PostgreSQL — APIs, microservices, and event-driven money movement.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Mobile App Development in Nairobi',
-          serviceType: 'Mobile Development',
+          name: 'Fintech Mobile App Development in Nairobi',
+          serviceType: 'Fintech Mobile App Development',
           areaServed: { '@type': 'City', name: 'Nairobi' },
-          description: 'iOS and Android mobile app development using Flutter and React Native.',
+          description: 'Flutter iOS and Android apps that move real money — wallets, card issuing, and checkout flows.',
         },
       },
     ],
@@ -206,7 +221,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': 'https://alexmaina.me/#localbusiness',
-  name: 'Alex Maina Mwangi — Full-Stack & Mobile Developer Nairobi',
+  name: 'Alex Maina Mwangi — Payment Systems Engineer Nairobi',
   url: 'https://alexmaina.me',
   telephone: '+254719531828',
   priceRange: '$$',
@@ -257,7 +272,7 @@ const breadcrumbSchema = {
     <meta name="author" content="Alex Maina Mwangi" />
     <meta
       name="keywords"
-      content="full-stack developer Nairobi, frontend developer Nairobi, backend developer Nairobi, mobile developer Nairobi, mobile app developer Nairobi, full-stack developer Kenya, frontend developer Kenya, backend developer Kenya, React developer Nairobi, Next.js developer Nairobi, Node.js developer Nairobi, TypeScript developer Nairobi, Go developer Nairobi, Flutter developer Nairobi, React Native developer Nairobi, iOS developer Nairobi, Android developer Nairobi, hire developer Nairobi, freelance developer Nairobi, software engineer Nairobi, Alex Maina Mwangi, Pocket of Paradise developer, Yeshara developer, Mamlaka Hub developer, TripHoppa, Almaza app, Light Growth, WarCare, Jionee Medical, Nairobi developer meetups, Nairobi tech meetups, Kenya developer community, payment gateway integration Nairobi, blockchain developer Nairobi"
+      content="payment systems engineer Nairobi, payments engineer Kenya, fintech developer Nairobi, fintech engineer Kenya, M-PESA integration developer, M-PESA Daraja API developer, Flutterwave integration Kenya, Pesapal integration Kenya, core banking API integration, payment gateway integration Nairobi, mobile money developer Kenya, digital wallet developer, virtual card issuing developer, merchant payouts and settlement, payment reconciliation engineer, idempotent payment API, backend developer Nairobi, Go developer Nairobi, Node.js developer Nairobi, Flutter developer Nairobi, mobile app developer Nairobi, iOS developer Nairobi, Android developer Nairobi, hire developer Nairobi, freelance developer Nairobi, software engineer Nairobi, Alex Maina Mwangi, GPAY Cameroon, Almaza card app, Yeshara developer, Mamlaka Hub developer, TripHoppa, Jionee Medical, Pocket of Paradise developer, Sameer Breeders, Nairobi developer meetups, Kenya developer community, blockchain developer Nairobi"
     />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />

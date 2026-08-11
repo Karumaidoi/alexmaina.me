@@ -1,5 +1,5 @@
 /* TEAM */
-Developer: Alex Maina Mwangi
+Developer: Alex Maina Mwangi — Payment Systems Engineer
 Contact: mainahmwangi12 [at] gmail.com
 Twitter: @alexmaina
 GitHub: github.com/Karumaidoi

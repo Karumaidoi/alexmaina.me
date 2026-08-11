@@ -1,42 +1,43 @@
 ---
-const stats = [
-  { value: '5+', label: 'Years Experience' },
-  { value: '10+', label: 'Projects Shipped' },
-];
 ---
 <section id="about">
   <section class="about-inner section-inner">
     <h2 class="section-heading" data-aos="fade-up">About Me</h2>
     <div class="about-inner__content" data-aos="fade-up" data-aos-delay="100">
       <p>
-        I'm a <strong>full-stack, frontend, backend, and mobile developer
-        based in Nairobi, Kenya</strong>, with <strong>5+ years</strong> of
-        experience across startups and SaaS companies. I build production-grade
-        <strong>React, Next.js, Node.js, Go, and Flutter</strong> applications,
-        leading teams to ship reliable, performant products end to end.
+        Most engineers describe themselves by their stack. I'd rather describe
+        the problem I own: <strong>getting money from one party to another
+        without anything going wrong in between</strong>. I'm a
+        <strong>payment systems engineer based in Nairobi, Kenya</strong>, and
+        for five years that has been the work — collections, disbursements,
+        wallets, card issuing, and settlement.
       </p>
       <p>
-        Selected work includes <strong>Pocket of Paradise</strong> (luxury
-        travel platform), <strong>Yeshara</strong> (CMA-approved real-estate
-        blockchain), <strong>Mamlaka Hub</strong> (payments fintech),
-        <strong>TripHoppa</strong> (peer-to-peer parcel shipping with a Flutter
-        mobile app), and <strong>Almaza</strong> (fintech virtual cards on the
-        App Store). My specialties: end-to-end web and mobile development, API
-        design, and <strong>Kenyan payment gateway integrations</strong>.
+        The hard part was never the API call. It's the retry that arrives twice,
+        the provider callback that lands late and out of order, the payment that
+        succeeds on their side and times out on yours. So the things I build
+        around a transaction are <strong>idempotent endpoints</strong>,
+        <strong>one-way state machines</strong>, <strong>exactly-once callback
+        handling</strong>, and <strong>daily reconciliation</strong> against the
+        provider's own record — so the ledger and the money agree at the end of
+        every day.
       </p>
       <p>
-        I'm an active member of the Nairobi developer community and regularly
-        attend Nairobi tech meetups (JavaScript, GDG Nairobi, Flutter Nairobi).
-        Available for hire across Nairobi and remotely worldwide.
+        I've shipped this on <strong>M-PESA (Daraja)</strong>,
+        <strong>Flutterwave</strong>, <strong>Pesapal</strong>, and
+        <strong>Core Banking APIs</strong>, across
+        <strong>GPAY</strong> (mobile fintech in Cameroon),
+        <strong>Almaza</strong> (virtual cards on the App Store),
+        <strong>Yeshara</strong> (CMA-approved real-estate tokenization), and a
+        cashless matatu fare system settling to SACCOs in real time. Backend in
+        <strong>Go and Node.js on PostgreSQL</strong>;
+        <strong>Flutter</strong> when the money has to reach someone's phone.
       </p>
-    </div>
-    <div class="about-inner__stats" data-aos="fade-up" data-aos-delay="200">
-      {stats.map((stat) => (
-        <div class="stat">
-          <span class="stat__number">{stat.value}</span>
-          <span class="stat__label">{stat.label}</span>
-        </div>
-      ))}
+      <p>
+        Active in the Nairobi developer community (JavaScript, GDG Nairobi,
+        Flutter Nairobi). Available for payments work in Nairobi and remotely
+        worldwide.
+      </p>
     </div>
   </section>
 </section>
